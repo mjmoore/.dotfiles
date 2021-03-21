@@ -18,6 +18,10 @@ interval=1
 command=echo "$USER"
 interval=once
 
+[OS]
+command=echo "$(uname --operating-system) $(uname --kernel-release)"
+interval=once
+
 [time]
 command=date '+%Y-%m-%d %H:%M:%S'
 interval=1
