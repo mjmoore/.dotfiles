@@ -66,8 +66,7 @@ bindsym $mod+Shift+k move down
 bindsym $mod+Shift+l move up
 bindsym $mod+Shift+semicolon move right
 
-bindsym $mod+Ctrl+j move container to output left
-bindsym $mod+Ctrl+semicolon move container to output right
+bindsym $mod+o move container to workspace next
 
 # split in horizontal orientation
 bindsym $mod+h split h
