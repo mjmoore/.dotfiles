@@ -142,5 +142,5 @@ bar {
 	output DVI-D-1
 	position top
 	workspace_buttons no
-        status_command i3status
+        status_command i3blocks
 }
