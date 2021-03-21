@@ -15,8 +15,8 @@ command=playerctl metadata --format "{{artist}} - {{title}}"
 interval=1
 
 [weather]
-command=curl "wttr.in/Berlin?format=1"
-interval=3600
+command=curl 'wttr.in/Berlin?format=3'
+interval=1
 
 [user]
 command=echo "$USER"
