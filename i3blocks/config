@@ -14,10 +14,6 @@ separator_block_width=15
 command=playerctl metadata --format "{{artist}} - {{title}}"
 interval=1
 
-[weather]
-command=curl 'wttr.in/Berlin?format=3'
-interval=1
-
 [user]
 command=echo "$USER"
 interval=once
@@ -25,6 +21,10 @@ interval=once
 [OS]
 command=echo "$(uname --operating-system) $(uname --kernel-release)"
 interval=once
+
+[weather]
+command=curl 'wttr.in/Berlin?format=3'
+interval=3600
 
 [time]
 command=date '+%Y-%m-%d %H:%M:%S'
