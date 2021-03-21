@@ -11,7 +11,7 @@ separator=true
 separator_block_width=15
 
 [spotify]
-command=playerctl metadata --format "{{artist}} - {{title}}"
+command=playerctl --player=spotify metadata --format "{{artist}} - {{title}}"
 interval=1
 
 [user]
