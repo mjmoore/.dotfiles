@@ -18,6 +18,10 @@ interval=1
 command=echo "$USER"
 interval=once
 
+[keymap]
+command=$HOME/.config/i3blocks/keymap
+interval=5
+
 [OS]
 command=echo "$(uname --operating-system) $(uname --kernel-release)"
 interval=once
