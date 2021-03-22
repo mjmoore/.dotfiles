@@ -35,3 +35,5 @@ source $ZSH/oh-my-zsh.sh
 
 export EDITOR=vim
 export BROWSER=firefox
+
+export VIMINIT="source $HOME/.config/vim/vimrc"
