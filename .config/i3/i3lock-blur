@@ -3,6 +3,6 @@
 screenshot=/tmp/lock.png
 
 scrot $screenshot
-convert $screenshot -blur "10x10" $screenshot
+convert $screenshot -scale 25% -resize 400% $screenshot
 i3lock -i $screenshot
 rm $screenshot
