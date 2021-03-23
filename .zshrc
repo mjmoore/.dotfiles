@@ -1,5 +1,5 @@
 # Prompt to start X if not running
-if ! xset q &>/dev/null; then
+if command -v startx && command -v xset && ! xset q &>/dev/null; then
     while true; do
         read "?Start X server? " yn
         case $yn in
