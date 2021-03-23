@@ -29,7 +29,7 @@ DISABLE_AUTO_UPDATE="true"
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git fzf ssh-agent)
+plugins=(git fzf ssh-agent colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
