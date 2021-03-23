@@ -14,6 +14,10 @@ separator_block_width=15
 command=playerctl --player=spotify metadata --format "{{artist}} - {{title}}"
 interval=1
 
+[sound]
+command=$HOME/.config/i3blocks/sound
+interval=1
+
 [user]
 command=echo "$USER"
 interval=once
