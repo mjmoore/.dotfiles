@@ -4,5 +4,9 @@ set viminfo+=n~/.config/vim/viminfo
 
 syntax on
 
+set shiftwidth=4
+set smarttab
+set tabstop=4
+
 " Hybrid line numbers
 set number relativenumber
