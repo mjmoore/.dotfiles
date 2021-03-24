@@ -1,7 +1,7 @@
 # Prompt to start X if not running
-if [ command -v startx &> /dev/null ] && \
-   [ command -v xset &> /dev/null ] && \ 
-   [ ! xset q &> /dev/null ]
+if [ command -v startx &> /dev/null && \
+     command -v xset &> /dev/null && \ 
+     ! xset q &> /dev/null ];
 then
     while true; do
         read "?Start X server? " yn
@@ -11,7 +11,7 @@ then
         esac
     done
 else
-    # If running inside X, attach tmux
+# If running inside X, attach tmux
     tmux attach &> /dev/null
     if [[ ! $TERM =~ screen ]]; then
         exec tmux -2
