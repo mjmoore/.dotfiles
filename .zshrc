@@ -40,3 +40,6 @@ export EDITOR=vim
 export BROWSER=firefox
 
 export VIMINIT="source $HOME/.config/vim/vimrc"
+
+alias stash="git stash"
+alias unstash="git stash apply stash@{0}"
