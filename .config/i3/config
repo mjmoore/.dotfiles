@@ -44,6 +44,9 @@ bindsym XF86AudioPlay exec playerctl --player=spotify play-pause
 bindsym XF86AudioNext exec playerctl --player=spotify next
 bindsym XF86AudioPrev exec playerctl --player=spotify previous
 
+# Take a screen shot
+bindsym Print exec flameshot gui
+
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
