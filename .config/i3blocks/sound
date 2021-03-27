@@ -1,3 +1,4 @@
 #!/usr/bin/env sh
 
-amixer get 'Master' | grep 'Front Left:' | awk -F'[][]' '{print $2}'
+volume=$(amixer get 'Master' | grep 'Front Left:' | awk -F'[][]' '{print $2}')
+echo "🔊 $volume"
