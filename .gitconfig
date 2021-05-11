@@ -1,0 +1,9 @@
+[user]
+	email = martinmoorej@gmail.com
+	name = Martin Moore
+[init]
+	templatedir = ~/.config/git/git-templates
+[includeif "gitdir:~/dev/work/"]
+	path = ~/dev/work/.gitconfig
+[core]
+	editor = vim
