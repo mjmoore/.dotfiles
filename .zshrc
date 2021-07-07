@@ -32,12 +32,14 @@ DISABLE_AUTO_UPDATE="true"
 # much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
-plugins=(git fzf ssh-agent colored-man-pages)
+plugins=(git fzf ssh-agent colored-man-pages aws)
 
 source $ZSH/oh-my-zsh.sh
 
 export EDITOR=vim
 export BROWSER=firefox
+
+export AWS_CONFIG_FILE="$HOME/.config/aws/config"
 
 export VIMINIT="source $HOME/.config/vim/vimrc"
 
