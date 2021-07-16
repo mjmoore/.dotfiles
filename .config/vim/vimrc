@@ -7,6 +7,10 @@ syntax on
 set shiftwidth=4
 set smarttab
 set tabstop=4
+set expandtab
 
 " Hybrid line numbers
 set number relativenumber
+
+" Use system clipboard
+set clipboard=unnamed
