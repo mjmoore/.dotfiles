@@ -19,7 +19,7 @@ font pango:monospace 9
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
 #font pango:DejaVu Sans Mono 8
 
-smart_gaps on
+smart_gaps on 
 smart_borders on
 gaps inner 10
 
@@ -51,7 +51,7 @@ bindsym Print exec flameshot gui
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec termite
+bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -69,10 +69,15 @@ bindsym $mod+Shift+o move container to workspace next; workspace next
 bindsym $mod+o workspace next
 
 # split in horizontal orientation
-# bindsym $mod+h split h
+bindsym $mod+Shift+h split h
 
 # split in vertical orientation
-# bindsym $mod+v split v
+bindsym $mod+Shift+v split v
+
+bindsym $mod+Left move left
+bindsym $mod+Right move right
+bindsym $mod+Up move up
+bindsym $mod+Down move down
 
 # enter fullscreen mode for the focused container
 bindsym $mod+f fullscreen toggle
@@ -104,11 +109,33 @@ bindsym $mod+Shift+l exec ~/.config/i3/i3lock-blur
 
 # exit i3 (logs you out of your X session)
 # bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
-bindsym $mod+Shift+e exit
+# bindsym $mod+Shift+e exit
+mode "exit: [l]ogout, [r]eboot, [s]hutdown" {
+
+  bindsym l exec i3-msg exit
+
+  bindsym r exec systemctl reboot
+
+  bindsym s exec systemctl shutdown
+
+  bindsym Escape mode "default"
+
+  bindsym Return mode "default"
+
+}
+
+bindsym $mod+x mode "exit: [l]ogout, [r]eboot, [s]hutdown"
 
 # Start i3bar to display a workspace bar 
 bar {
+	tray_output primary
 	position top
 	workspace_buttons no
-        status_command i3blocks
+	status_command i3blocks
 }
+
+# Startup programs
+exec firefox
+exec signal-desktop
+exec spotify
+exec alacritty
